@@ -20,6 +20,7 @@ module "logs" {
   name                     = var.name
   stage                    = var.stage
   namespace                = var.namespace
+  force_destroy            = var.force_destroy
   delimiter                = var.delimiter
   attributes               = compact(concat(var.attributes, ["logs"]))
   standard_transition_days = var.logs_standard_transition_days
